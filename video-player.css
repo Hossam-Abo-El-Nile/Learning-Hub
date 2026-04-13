@@ -9,15 +9,15 @@ html {
 }
 
 body {
-  overflow-x: visible;
+  overflow-x: visible; 
   margin: 0;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; 
+}
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #e4e4e4, rgb(172, 194, 201), #6c9ea5);
+  background-color: #F8F5F2;
   animation: fadeIn 0.8s ease-in;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 @keyframes fadeIn {
@@ -40,49 +40,15 @@ body {
   }
 }
 
-/* Navbar Styles */
-.navbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-areas: "loggo links btn";
-  background-color: #1A3A5A;
-  padding: 15px 30px;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: slideDown 0.5s ease-out;
-}
-
-.logo {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  justify-content: center;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-  padding: 8px 12px;
-  border-radius: 5px;
-}
-
-.nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
-
-.navbar-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .login-btn,
@@ -91,36 +57,90 @@ body {
   color: white;
   border: none;
   padding: 10px 18px;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
   font-weight: bold;
+  transition: 0.5s;
 }
 
 .login-btn {
-  background-color: #4DB6E2;
+  background-color: #2196f3;
+  margin-right: 10px;
 }
 
 .login-btn:hover {
-  background-color: #2196C9;
-  transform: scale(1.05);
+  background-color: #0060c0;
 }
 
 .logout-btn {
-  background-color: #FF6B6B;
-  display: none;
+  background-color: #4c7c78;
 }
 
 .logout-btn:hover {
-  background-color: #EE5A52;
-  transform: scale(1.05);
+  background-color: #6d6d6d;
 }
 
-.login-btn:active,
-.logout-btn:active {
-  transform: scale(0.95);
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
 }
 
+ .navbar{ 
+  opacity: 0.8;
+  border-radius: 50px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  height: 5.5vh;
+  width: 99%;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  align-content: center;
+  justify-content: space-between;
+  grid-template-areas: " loggo links btn"; 
+  background-color: #e4e4e4;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 40px rgb(2, 60, 75);
+  border-bottom: 1px solid rgba(1, 53, 40, 0.897);
+  animation: slideDown 0.6s ease-out;
+  z-index: 1000;
+ }
+ 
+.nav-links  {
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links  a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.nav-links  a.active {
+  background-color: #4ddbff;
+  color: #ffffff;
+}
+
+
+.nav-links  a:hover {
+  background-color: #47acff;
+  color: #ffffff;
+}
+.logo {
+  margin: 0;
+  padding: 0%;
+  font-weight: bold;
+  font-size: 25px;
+  color: #47acff;
+}
 /* Main Content */
 .video-container {
   flex: 1;
