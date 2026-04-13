@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: visible;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e4e4e4, rgb(172, 194, 201), #6c9ea5);
+  animation: fadeIn 0.8s ease-in;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "loggo links btn";
+  background-color: #1A3A5A;
+  padding: 15px 30px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.5s ease-out;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.login-btn,
+.logout-btn {
+  font-size: 110%;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #4DB6E2;
+}
+
+.login-btn:hover {
+  background-color: #2196C9;
+  transform: scale(1.05);
+}
+
+.logout-btn {
+  background-color: #FF6B6B;
+  display: none;
+}
+
+.logout-btn:hover {
+  background-color: #EE5A52;
+  transform: scale(1.05);
+}
+
+.login-btn:active,
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
+/* Main Content */
+.video-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.video-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  animation: slideDown 0.6s ease-out;
+}
+
+.video-player iframe {
+  border: none;
+}
+
+.video-info {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.video-info h2 {
+  color: #1A3A5A;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.video-info p {
+  color: #4A5A6A;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1b3d38;
+  font-size: 150%;
+  background-color: rgb(75, 103, 104);
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    grid-template-areas: "loggo" "links" "btn";
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .video-player {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 20px;
+  }
+
+  .video-info {
+    padding: 20px;
+  }
+
+  .video-info h2 {
+    font-size: 20px;
+  }
+
+  .video-info p {
+    font-size: 14px;
+  }
+
+  .video-container {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .login-btn,
+  .logout-btn {
+    padding: 8px 12px;
+    font-size: 90%;
+  }
+
+  #footer {
+    font-size: 120%;
+    padding: 15px;
+  }
+}

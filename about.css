@@ -1,0 +1,239 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: visible; 
+  margin: 0;
+  scroll-behavior: smooth; 
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F8F5F2;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.login-btn,
+.logout-btn {
+  font-size: 110%;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.login-btn {
+  background-color: #2196f3;
+  margin-right: 10px;
+}
+
+.login-btn:hover {
+  background-color: #0060c0;
+}
+
+.logout-btn {
+  background-color: #4c7c78;
+}
+
+.logout-btn:hover {
+  background-color: #6d6d6d;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+ .navbar{ 
+  opacity: 0.8;
+  border-radius: 50px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  height: 5.5vh;
+  width: 99%;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  align-content: center;
+  justify-content: space-between;
+  grid-template-areas: " loggo links btn"; 
+  background-color: #e4e4e4;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 40px rgb(2, 60, 75);
+  border-bottom: 1px solid rgba(1, 53, 40, 0.897);
+  animation: slideDown 0.6s ease-out;
+  z-index: 1000;
+ }
+ 
+.nav-links  {
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links  a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.nav-links  a.active {
+  background-color: #4ddbff;
+  color: #ffffff;
+}
+
+
+.nav-links  a:hover {
+  background-color: #47acff;
+  color: #ffffff;
+}
+.logo {
+  margin: 0;
+  padding: 0%;
+  font-weight: bold;
+  font-size: 25px;
+  color: #47acff;
+}
+
+
+.about-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #F8F5F2 0%, #E8E8E8 100%);
+}
+
+.card-content {
+  background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 10%, #D2AC47 100%);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 25px 80px rgba(0, 48, 44, 0.863), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.8s ease;
+  border: 2px solid rgb(0, 0, 0);
+  backdrop-filter: blur(20px);
+}
+
+.card-content:hover {
+  transform: translateY(-10px) scale(1.10);
+  box-shadow: 0 35px 100px rgba(2, 68, 63, 0.2), 0 0 0 1px rgba(71, 172, 255, 0.2);
+}
+
+.card-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.card-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #3E2723;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.card-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.feature {
+  background: #707072;
+  padding: 25px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  background: #cdced2;
+  box-shadow: 0 10px 30px rgba(139, 139, 139, 0.2);
+}
+
+.feature h3 {
+  font-size: 22px;
+  color: #1A2238;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #000000 0%, #999999 50%, #000000 100%);
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.7s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.63);
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.explore-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgb(0, 0, 0);
+  background: linear-gradient(135deg, #999999 0%, #000000 50%, #999999 100%);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details📚</title>
+    <link rel="stylesheet" href="course-detail.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" style="grid-area: loggo;">
+         📘 LearnHub
+        </div>
+
+         <ul class="nav-links" style="grid-area: links;">
+             <a href="home.html">Home</a>
+             <a href="courses.html">Courses</a>
+             <a href="about.html">About Us</a>
+             <a href="account.html" class="acc">Account</a>
+        </ul>
+
+  <div class="navbar-actions" style="grid-area: btn;">
+    <a id="loginLink" href="logs/login.html"><button class="login-btn">Login</button></a>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+</nav>
+
+<div class="course-container">
+    <div class="course-header">
+        <img id="courseImage" src="" alt="Course Image" class="course-image">
+        <div class="course-info">
+            <h1 id="courseTitle"></h1>
+            <div class="course-meta">
+                <span class="duration"><strong>Duration:</strong> <span id="courseDuration"></span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-description">
+        <h2>📝 Course Description</h2>
+        <p id="courseDescription"></p>
+    </div>
+
+    <div class="course-videos">
+        <h2>🎬 Course Videos</h2>
+        <ul id="videosList" class="videos-list">
+        </ul>
+    </div>
+
+    <div class="course-actions">
+        <a href="courses.html" class="back-btn">← Back to Courses</a>
+        <a href="account.html" class="account-btn">Go to My Account</a>
+    </div>
+</div>
+
+<div id="footer" style="grid-area: footer;">
+    <p>
+        © 2024 LearnHub. All rights reserved.
+    </p>
+</div>
+
+<script src="course-data.js"></script>
+<script src="account.js"></script>
+<script src="course-detail.js"></script>
+</body>
+</html>

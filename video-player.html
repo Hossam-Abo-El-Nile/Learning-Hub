@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player 🎥</title>
+    <link rel="stylesheet" href="video-player.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+         📘 LearnHub
+        </div>
+
+         <ul class="nav-links">
+             <a href="home.html">Home</a>
+             <a href="courses.html">Courses</a>
+             <a href="about.html">About Us</a>
+             <a href="account.html" class="acc">Account</a>
+        </ul>
+
+        <div class="navbar-actions">
+            <a id="loginLink" href="logs/login.html"><button class="login-btn">Login</button></a>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="video-container">
+        <div class="video-player">
+            <iframe 
+                id="videoFrame"
+                width="100%" 
+                height="100%" 
+                src="" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="video-info">
+            <h2 id="videoTitle">اختر فيديو لتشغيله</h2>
+            <p id="videoDescription">اختر أي فيديو من قائمة الكورس لتشغيله هنا</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>© 2024 LearnHub. All rights reserved.</p>
+    </div>
+
+    <script src="account.js"></script>
+    <script src="video-player.js"></script>
+</body>
+</html>

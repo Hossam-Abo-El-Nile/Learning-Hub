@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses 📖</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" style="grid-area: loggo;">
+         📘 LearnHub
+        </div>
+
+         <ul class="nav-links" style="grid-area: links;">
+             <a href="home.html">Home</a>
+             <a href="courses.html">Courses</a>
+             <a href="about.html">About Us</a>
+             <a href="account.html" class="acc">Account</a>
+        </ul>
+
+  <div class="navbar-actions" style="grid-area: btn;">
+    <a id="loginLink" href="logs/login.html"><button class="login-btn">Login</button></a>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+</nav>
+<div class="title" >
+    <h2>Our Courses 📚</h2>
+</div>
+<p class="title2"> HTML SERIES ⛓</p>
+<div class="grid">
+
+        <div class="c1">
+            <img src="https://166tech.az/uploads/blogs/33915082.webp" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>HTML-FUNDMENTALS</h3>
+                    <p>begineer course for html web development .</p>
+                    <button onclick="enrollCourse('HTML-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+        <div class="c2">
+            <img src="https://images.ctfassets.net/ii9ehdcj88bc/6ShRt5ztym1rNLJLtXH780/4130c4ae78bf64e53b3563ba535785a3/css.png" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>HTML-INTERMEDIET</h3>
+                    <p>intermediate course for html web development .</p>
+                    <button onclick="enrollCourse('HTML-INTERMEDIET')"  class="enroll-btn">Enroll</button>
+                </div>
+            
+        </div>
+
+        <div class="c3"> 
+            <img src="https://www.udacity.com/blog/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>HTML-ADVANCED</h3>
+                    <p>advanced course for html web development .</p>
+                    <button onclick="enrollCourse('HTML-ADVANCED')"  class="enroll-btn">Enroll</button>
+                </div>
+       
+         </div>
+
+         
+
+    </div>
+    <p class="title2"> CSS SERIES ⛓</p>
+    <div class="grid">
+
+        <div class="c1">
+            <img src="https://blog.openreplay.com/images/a-top-collection-of-css-code-generators/images/hero.png" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>CSS-FUNDMENTALS</h3>
+                    <p>begineer course for css web development .</p>
+                    <button onclick="enrollCourse('CSS-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+        <div class="c2">
+            <img src="https://cssversicherung.scene7.com/is/image/csskrankenversicherung/css-hauptgebaeude-aussen-beschriftung:image-2-1?wid=1600&fit=constrain,0&resMode=sharp2&noC=4442448352" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>CSS-INTERMEDIET</h3>
+                    <p>intermediate course for css web development .</p>
+                    <button onclick="enrollCourse('CSS-INTERMEDIET')"  class="enroll-btn">Enroll</button>
+                </div>
+            
+        </div>
+
+        <div class="c3"> 
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaRkOEuHN07Ev1O3PUXqdNXw5d1PU98tJAlw&s" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>CSS-ADVANCED</h3>
+                    <p>advanced course for css web development .</p>
+                    <button onclick="enrollCourse('CSS-ADVANCED')"  class="enroll-btn">Enroll</button>
+                </div>
+       
+         </div>
+
+         
+
+    </div>
+<p class="title2"> JAVASCRIPT SERIES ⛓</p>
+    <div class="grid">
+
+        <div class="c1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY4FbRjumQU3YUZMEHJMowXQzPlSUH1QCmsA&s" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>JAVASCRIPT-FUNDMENTALS</h3>
+                    <p>begineer course for javascript web development .</p>
+                    <button onclick="enrollCourse('JAVASCRIPT-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+        <div class="c2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBuM0cKT-0QOfhJd0OelvqbamCwIC6W17u2Q&s" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>JAVASCRIPT-INTERMEDIET</h3>
+                    <p>intermediate course for javascript web development .</p>
+                    <button onclick="enrollCourse('JAVASCRIPT-INTERMEDIET')"  class="enroll-btn">Enroll</button>
+                </div>
+            
+        </div>
+
+        <div class="c3"> 
+            <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*cHrvwC4q49WWotAA.jpg" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>JAVASCRIPT-ADVANCED</h3>
+                    <p>advanced course for javascript web development .</p>
+                    <button onclick="enrollCourse('JAVASCRIPT-ADVANCED')"  class="enroll-btn">Enroll</button>
+                </div>
+       
+         </div>
+
+         
+
+    </div>
+
+
+      <div id="footer" style="grid-area: footer;">
+        <p>
+            © 2024 LearnHub. All rights reserved.
+        </p>
+    </div>
+    <script src="course-data.js"></script>
+    <script src="account.js"></script>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="account.js"></script>
+</body>
+</html>

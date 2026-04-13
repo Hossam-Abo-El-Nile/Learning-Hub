@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background : linear-gradient(to bottom, #e4e4e4,rgb(172, 194, 201), #6c9ea5);
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.login-btn,
+.logout-btn {
+  font-size: 110%;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.login-btn {
+  background-color: #2196f3;
+  margin-right: 10px;
+}
+
+.login-btn:hover {
+  background-color: #0060c0;
+}
+
+.logout-btn {
+  background-color: #4c7c78;
+}
+
+.logout-btn:hover {
+  background-color: #6d6d6d;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+ .navbar{ 
+  opacity: 0.8;
+  border-radius: 50px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  height: 5.5vh;
+  width: 99%;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  align-content: center;
+  justify-content: space-between;
+  grid-template-areas: " loggo links btn"; 
+  background-color: #e4e4e4;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 40px rgb(2, 60, 75);
+  border-bottom: 1px solid rgba(1, 53, 40, 0.897);
+  animation: slideDown 0.6s ease-out;
+  z-index: 1000;
+ }
+ 
+.nav-links  {
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links  a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.nav-links  a.active {
+  background-color: #4ddbff;
+  color: #ffffff;
+}
+
+
+.nav-links  a:hover {
+  background-color: #47acff;
+  color: #ffffff;
+}
+.logo {
+  margin: 0;
+  padding: 0%;
+  font-weight: bold;
+  font-size: 25px;
+  color: #47acff;
+}
+.bodyy{
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 30vh 60vh 15vh;
+  grid-template-areas: "img essentialinfo essentialinfo essentialinfo"
+                     "informations informations mycourses mycourses"
+                     "footer footer footer footer"
+  ;
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+#pic{
+  width: 70%;
+  height: 70%;
+  object-fit: fill;
+  border-radius: 100%;
+  animation: slideUp 0.7s ease-out 0.3s both;
+}
+
+#essentialinfo{
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 150%;
+  color: #4b4b4b;
+  animation: slideUp 0.7s ease-out 0.4s both;
+}
+
+#informations{
+  color: #464646;
+  padding: 100px;
+  font-size: 150%;
+  font-weight: bold;
+  animation: slideUp 0.7s ease-out 0.5s both;
+}
+
+#mycourses{
+  color: #2c5e42;
+  font-size: 150%;
+  font-weight: bold;
+  margin:0;
+  padding:0;
+  animation: slideUp 0.7s ease-out 0.6s both;
+}
+#footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1b3d38;
+  font-size: 150%;
+  background-color: rgb(75, 103, 104);
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: visible; 
+  margin: 0;
+  scroll-behavior: smooth; 
+}
+#studentName,#studentEmail{
+  color: #24383a;
+  font-weight: bold;
+  font-size: 70%;
+  padding: 50px;
+
+}

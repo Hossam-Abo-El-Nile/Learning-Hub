@@ -1,0 +1,375 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: visible;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e4e4e4, rgb(172, 194, 201), #6c9ea5);
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-btn,
+.logout-btn {
+  font-size: 110%;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.login-btn {
+  background-color: #2196f3;
+  margin-right: 10px;
+}
+
+.login-btn:hover {
+  background-color: #0060c0;
+}
+
+.logout-btn {
+  background-color: #4c7c78;
+}
+
+.logout-btn:hover {
+  background-color: #6d6d6d;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar {
+  opacity: 0.8;
+  border-radius: 50px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  height: 5.5vh;
+  width: 99%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  align-content: center;
+  justify-content: space-between;
+  grid-template-areas: "loggo links btn";
+  background-color: #e4e4e4;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 40px rgb(2, 60, 75);
+  border-bottom: 1px solid rgba(1, 53, 40, 0.897);
+  animation: slideDown 0.6s ease-out;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.nav-links a.active {
+  background-color: #4ddbff;
+  color: #ffffff;
+}
+
+.nav-links a:hover {
+  background-color: #47acff;
+  color: #ffffff;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 25px;
+  color: #47acff;
+}
+
+.course-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: slideUp 0.8s ease-out;
+}
+
+.course-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(3, 43, 53, 0.2);
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.course-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-info {
+  padding: 20px;
+}
+
+.course-info h1 {
+  margin: 0 0 20px 0;
+  color: #1A3A5A;
+  font-size: 32px;
+}
+
+.course-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #4A5A6A;
+}
+
+.duration {
+  background-color: #4DB6E2;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.course-description {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(3, 43, 53, 0.2);
+  margin-bottom: 30px;
+}
+
+.course-description h2 {
+  color: #1A3A5A;
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.course-description p {
+  color: #4A5A6A;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.course-videos {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(3, 43, 53, 0.2);
+  margin-bottom: 30px;
+}
+
+.course-videos h2 {
+  color: #1A3A5A;
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.videos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.video-item:hover {
+  background-color: #f5f5f5;
+  transform: translateX(5px);
+}
+
+.video-item:last-child {
+  border-bottom: none;
+}
+
+.video-number {
+  width: 40px;
+  height: 40px;
+  background-color: #4DB6E2;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.video-content {
+  flex: 1;
+}
+
+.video-content h3 {
+  margin: 0 0 5px 0;
+  color: #1A3A5A;
+  font-size: 16px;
+}
+
+.video-duration {
+  color: #4A5A6A;
+  font-size: 14px;
+}
+
+.watch-btn {
+  background-color: #4DB6E2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+  display: inline-block;
+  margin-left: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.watch-btn:hover {
+  background-color: #2196C9;
+  transform: scale(1.05);
+}
+
+.watch-btn:disabled,
+.watch-btn.disabled {
+  background-color: #aac5d2;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+.course-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.back-btn,
+.account-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.back-btn {
+  background-color: #4c7c78;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #6d6d6d;
+  transform: translateY(-2px);
+}
+
+.account-btn {
+  background-color: #4DB6E2;
+  color: white;
+}
+
+.account-btn:hover {
+  background-color: #2196C9;
+  transform: translateY(-2px);
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1b3d38;
+  font-size: 150%;
+  background-color: rgb(75, 103, 104);
+  margin-top: 50px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .course-header {
+    grid-template-columns: 1fr;
+  }
+
+  .course-info h1 {
+    font-size: 24px;
+  }
+
+  .course-actions {
+    flex-direction: column;
+  }
+
+  .back-btn,
+  .account-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

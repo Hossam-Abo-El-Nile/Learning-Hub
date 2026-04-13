@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" author="hossamm ✌">
+    <title>LearnHub - Home 🏠</title>
+    <link rel="stylesheet" href="home.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" style="grid-area: loggo;">
+         📘 LearnHub
+        </div>
+
+         <ul class="nav-links" style="grid-area: links;">
+             <a href="home.html">Home</a>
+             <a href="courses.html">Courses</a>
+             <a href="about.html">About Us</a>
+             <a href="account.html" class="acc">Account</a>
+        </ul>
+
+  <div class="navbar-actions" style="grid-area: btn;">
+    <a id="loginLink" href="logs/login.html"><button class="login-btn">Login</button></a>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+</nav>
+    <div class="welcome-box">
+        <div class="welcome-content">
+            <h2>Welcome to LearnHub 📖</h2>
+            <p>Welcome to LearnHub, where you can discover new frontiers of knowledge and learning. Get ready to embark on an exciting educational journey. ✌</p>
+            <a href="courses.html" class="welcome-btn">Get Started</a>
+        </div>
+    </div>
+    <div class="grid">
+
+        <div id="c1">
+            <img src="https://166tech.az/uploads/blogs/33915082.webp" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>HTML-FUNDMENTALS</h3>
+                    <p>begineer course for html web development .</p>
+                    <button onclick="enrollCourse('HTML-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+        <div id="c2">
+            <img src="https://images.ctfassets.net/ii9ehdcj88bc/6ShRt5ztym1rNLJLtXH780/4130c4ae78bf64e53b3563ba535785a3/css.png" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>CSS-FUNDMENTALS</h3>
+                    <p>begineer course for css web development .</p>
+                    <button onclick="enrollCourse('CSS-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+            
+        </div>
+
+        <div id="c3"> 
+            <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*cHrvwC4q49WWotAA.jpg" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>JAVASCRIPT-FUNDMENTALS</h3>
+                    <p>begineer course for javascript web development .</p>
+                    <button onclick="enrollCourse('JAVASCRIPT-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+        <div id="c4">
+            <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*FHirJFcDU0PZb3kCCULfXw.png" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>ANIMATION-FUNDMENTALS</h3>
+                    <p>begineer course for animation web development .</p>
+                    <button onclick="enrollCourse('ANIMATION-FUNDMENTALS')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+        <div id="c5">
+            <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu9pagv0627l2cjgcaja0.png" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>CSS-FLEX BOX</h3>
+                    <p>begineer course for css flex box web development .</p>
+                    <button onclick="enrollCourse('CSS-FLEX BOX')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+
+        <div id="c6">
+            <img src="https://miro.medium.com/v2/resize:fit:3608/format:webp/0*og90_m1gsg9iOY7i.png" alt="Icon 1">
+                <div class="cardcont">
+                    <h3>CSS-GRID</h3>
+                    <p>begineer course for css grid web development .</p>
+                    <button onclick="enrollCourse('CSS-GRID')"  class="enroll-btn">Enroll</button>
+                </div>
+        </div>
+
+    </div>
+
+
+
+      <div id="footer" style="grid-area: footer;">
+        <p>
+            © 2024 LearnHub. All rights reserved.
+        </p>
+    </div>
+    <script src="course-data.js"></script>
+    <script src="account.js"></script>
+    
+</body>
+</html>
