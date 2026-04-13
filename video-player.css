@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   overflow-x: hidden;
 }
@@ -140,8 +139,7 @@ body {
   font-weight: bold;
   font-size: 25px;
   color: #47acff;
-}
-/* Main Content */
+}/* Main Content */
 .video-container {
   flex: 1;
   display: flex;
